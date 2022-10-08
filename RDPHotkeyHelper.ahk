@@ -38,24 +38,20 @@ PassToLocalMachine() {
     Return
   }
   WM_APPCOMMAND := 0x0319
-  If (A_ThisHotKey = "Media_Play_Pause")
-    PostMessage, WM_APPCOMMAND, 0, 14<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_PLAY_PAUSE
-  Else If (A_ThisHotKey = "Media_Stop")
-    PostMessage, WM_APPCOMMAND, 0, 13<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_STOP
-  Else If (A_ThisHotKey = "Media_Prev")
-    PostMessage, WM_APPCOMMAND, 0, 12<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_PREVIOUSTRACK
-  Else If (A_ThisHotKey = "Media_Next")
-    PostMessage, WM_APPCOMMAND, 0, 11<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_NEXTTRACK
-  Else If (A_ThisHotKey = "Volume_Up")
-    PostMessage, WM_APPCOMMAND, 0, 10<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_VOLUME_UP
+  If (A_ThisHotKey = "Volume_Mute")
+    PostMessage, WM_APPCOMMAND, 0, 8<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_VOLUME_MUTE
   Else If (A_ThisHotKey = "Volume_Down")
     PostMessage, WM_APPCOMMAND, 0, 9<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_VOLUME_DOWN
-  Else If (A_ThisHotKey = "Volume_Mute")
-    PostMessage, WM_APPCOMMAND, 0, 8<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_VOLUME_MUTE
-}
-
-HideTrayTip() {
-  TrayTip
+  Else If (A_ThisHotKey = "Volume_Up")
+    PostMessage, WM_APPCOMMAND, 0, 10<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_VOLUME_UP
+  Else If (A_ThisHotKey = "Media_Next")
+    PostMessage, WM_APPCOMMAND, 0, 11<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_NEXTTRACK
+  Else If (A_ThisHotKey = "Media_Prev")
+    PostMessage, WM_APPCOMMAND, 0, 12<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_PREVIOUSTRACK
+  Else If (A_ThisHotKey = "Media_Stop")
+    PostMessage, WM_APPCOMMAND, 0, 13<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_STOP
+  Else If (A_ThisHotKey = "Media_Play_Pause")
+    PostMessage, WM_APPCOMMAND, 0, 14<<16,, ahk_class Shell_TrayWnd ; APPCOMMAND_MEDIA_PLAY_PAUSE
 }
 
 UpdateTrayIcon() {
