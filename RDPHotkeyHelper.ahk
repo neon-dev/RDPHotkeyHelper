@@ -1,6 +1,6 @@
 ﻿;@Ahk2Exe-SetMainIcon rhh.ico
-;@Ahk2Exe-Set FileVersion, 1.1.0.0
-;@Ahk2Exe-Set ProductVersion, 1.1.0.0
+;@Ahk2Exe-Set FileVersion, 1.1.1.0
+;@Ahk2Exe-Set ProductVersion, 1.1.1.0
 
 #SingleInstance Force
 #NoEnv
@@ -18,7 +18,6 @@ While true {
   Suspend, On ; rebind all hotkeys, otherwise they won't work in RDP fullscreen mode
   Suspend, Off
   Sleep, 250
-  SetNumLockState, On ; the remote desktop client disables num lock upon first connection for some reason
   WinWaitNotActive, %RdpWindowTitle%
 }
 
