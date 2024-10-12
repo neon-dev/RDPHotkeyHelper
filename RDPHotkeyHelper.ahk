@@ -12,7 +12,7 @@ A_IconTip := "RDP Hotkey Helper"
 Tray:= A_TrayMenu
 Tray.Delete()
 Tray.Add("Exit", Exit)
-ExeNamesPattern := "i)\\(mstsc|ApplicationFrameHost|VMConnect)\.exe$"
+ExeNamesPattern := "i)\\(mstsc|msrdc|ApplicationFrameHost|VMConnect)\.exe$"
 SetTitleMatchMode("RegEx")
 While true {
   global RdpHwnd := 0
