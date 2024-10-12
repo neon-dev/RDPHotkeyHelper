@@ -1,6 +1,6 @@
 ﻿;@Ahk2Exe-SetMainIcon rhh.ico
-;@Ahk2Exe-Set FileVersion, 1.2.0.0
-;@Ahk2Exe-Set ProductVersion, 1.2.0.0
+;@Ahk2Exe-Set FileVersion, 1.3.0.0
+;@Ahk2Exe-Set ProductVersion, 1.3.0.0
 ;@Ahk2Exe-PostExec "MPRESS.exe" "%A_WorkFileName%" -q -x, 0,, 1, 1
 
 #SingleInstance Force
